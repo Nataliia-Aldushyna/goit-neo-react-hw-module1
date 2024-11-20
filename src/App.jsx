@@ -1,4 +1,5 @@
 import './App.css';
+import Container from "./components/Container/Container";
 import Profile from './components/Profile/Profile';
 import FriendList from './components/FriendList/FriendList';
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
@@ -9,6 +10,7 @@ import transactions from '../transactions.json';
 const App = () => {
   return (
     <>
+    <Container>
       <Profile
         name={userData.username}
         tag={userData.tag}
@@ -18,6 +20,7 @@ const App = () => {
       />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
+    </Container>
     </>
   );
 };
